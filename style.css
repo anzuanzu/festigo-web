@@ -44,6 +44,8 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; display: fl
 .policy { max-width: 720px; padding-bottom: 32px; }
 .policy h1 { font-size: 32px; margin: 24px 0 4px; }
 .policy h2 { font-size: 19px; margin: 28px 0 6px; }
+.policy h3 { font-size: 16px; margin: 20px 0 4px; }
+footer .links { display: flex; gap: 16px; }
 .policy p { margin: 0; }
 .event { max-width: 760px; padding-bottom: 32px; }
 .event figure { margin: 8px 0 20px; }
