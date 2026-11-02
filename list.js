@@ -1,3 +1,10 @@
+// 「在 FestiGo 中開啟」：沒裝 App 時 festigo:// 打不開，1.5 秒後頁面還在前景就改去 App Store
+document.querySelectorAll('a[href^="festigo://"]').forEach(function (a) {
+  a.addEventListener('click', function () {
+    var timer = setTimeout(function () { if (!document.hidden) location.href = 'https://apps.apple.com/app/id6826856429'; }, 1500);
+    document.addEventListener('visibilitychange', function () { clearTimeout(timer); }, { once: true });
+  });
+});
 // 必去清單頁：網址參數 t（標題）、e（活動 id，逗號分隔）
 (function () {
   var cfg = window.FESTIGO;

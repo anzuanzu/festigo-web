@@ -1,3 +1,10 @@
+// 「在 FestiGo 中開啟」：沒裝 App 時 festigo:// 打不開，1.5 秒後頁面還在前景就改去 App Store
+document.querySelectorAll('a[href^="festigo://"]').forEach(function (a) {
+  a.addEventListener('click', function () {
+    var timer = setTimeout(function () { if (!document.hidden) location.href = 'https://apps.apple.com/app/id6826856429'; }, 1500);
+    document.addEventListener('visibilitychange', function () { clearTimeout(timer); }, { once: true });
+  });
+});
 // 活動頁的倒數天數在瀏覽器裡算，網站不用每天重新產生
 document.querySelectorAll('.countdown[data-start]').forEach(function (el) {
   var today = new Date(); today.setHours(0, 0, 0, 0);

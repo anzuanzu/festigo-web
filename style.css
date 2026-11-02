@@ -17,7 +17,9 @@ header { padding: 20px 0; display: flex; justify-content: space-between; align-i
 .hero { padding: 40px 0 24px; }
 .hero h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.02em; }
 .hero p { font-size: 18px; color: var(--muted); max-width: 720px; margin: 0; }
-.status { display: inline-block; margin-top: 20px; padding: 6px 12px; border-radius: 999px; background: var(--chip); font-size: 14px; }
+.hero-badge { margin-top: 24px; }
+.store-badge { display: inline-block; line-height: 0; }
+.store-badge img { height: 48px; width: auto; }
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 32px 0 48px; }
 .feature { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
 .feature b { display: block; margin: 6px 0 4px; }
